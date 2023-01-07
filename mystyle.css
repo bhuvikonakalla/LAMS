@@ -1,0 +1,20 @@
+.links {
+    text-decoration: underline;
+
+}
+
+.fonts {
+    font-family:"serif";
+    text-decoration: underline;
+}
+.bg-color{
+  background-color:#87cefa;
+  background-size:cover
+}
+.card-container{
+background-color:#b19cd9;
+height:80vh;
+width:90vw;
+background-size:cover;
+border-radius:20px
+}

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: #242B2E;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 10vh;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 60rem;
+    margin: 0 auto;
+    font-size: 112%;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Outfit', sans-serif;
+}
+
+.tabs label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    border-radius: 10px 10px 0 0;
+}
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0 10px 10px 10px;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background: #00D8FF;
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+}
+
+@media (max-width: 45em) {
+
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;  
+    max-width: 918px;
+    width: calc(100% - 20px);
+ }
+ .container .card{
+    position: relative;
+ }
+ .container .card .face{
+    width: 300рх;
+    height: 200рх;
+    transition: 0.5s;
+ }
+ .container .card .face.face1{
+           position: relative;
+           background: #333;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           z-index: 1;
+           transform: translateY(100px);
+ }
+ .container .card:hover .face.face1{
+    transform: translateY(0px);
+ }
+ .container .card .face.face1 .content
+ {
+    opacity: 0.8;
+    transition: 0.4s;
+ }
+ .container .card:hover .face.face1 .content
+ {
+       opacity: 1;
+ }
+ .container .card:hover .face.face1 .content img
+ {
+       max-width: 500px;
+ }
+ .container .card .face.face1 .content h3
+ {
+    color:powderblue;
+    text-align: center;
+
+ }
+ .container .card:hover .face.face1 .content h3
+ {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+ }
+ .container .card .face.face2{
+      position: relative;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      transform: translateY(-100px);
+ }
+ .container .card:hover .face.face2{
+    transform: translateY(0px);
+ 
+ }
+ .container .card .face.face2 .content a{
+ margin: 15px 0 0;
+ display: inline-block;
+ text-decoration: none;
+ font-weight: 900;
+ color: #333;
+ padding: 5px;
+ border: 1px solid #333
+ }
+ .container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
